@@ -24,17 +24,25 @@
 
 int greatest (int a, int b, int c)
 {
-  if((a>=b) && (a>=c))
+  if((a>b) && (a>c))
   {
     return a;
   }
-  if((b>=a) && (b>=c))
+  if((b>a) && (b>c))
   {
     return b;
   }
-   if((c>=a) && (c>=b))
+   if((c>a) && (c>b))
   {
     return c;
+  }
+  if((a==b) && (a>c))
+  {
+    return a;
+  }
+  if((a==c) && (a>b))
+  {
+    return a;
   }
   if((a==b) && (a==c))
   {
