@@ -28,16 +28,22 @@ int greatest (int a, int b, int c)
   {
     return a;
   }
-  if((b>a) && (b>c))
-  {
-    a=b;
-    return a;
-  }
-  if((c>a) && (c>b))
-  {
-    a=c;
-    return a;
-  }
+  else
+       {
+          if((b>a) && (b>c))
+          {
+            return b;
+          }
+          else
+              {
+                if((c>a) && (c>b))
+                {
+                   return c;
+                }
+
+              }
+         
+       }
  
 }
 
