@@ -24,7 +24,7 @@
 
 int greatest (int a, int b, int c)
 {
-  	if(a>b && a>c)
+  if(a>b && a>c)
 	{
 		return a;
 	}
