@@ -36,6 +36,10 @@ int greatest (int a, int b, int c)
   {
     return c;
   }
+  if((a==b) && (a==c))
+  {
+    return a;
+  }
  
 }
 
