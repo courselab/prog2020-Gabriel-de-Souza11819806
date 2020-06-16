@@ -30,20 +30,20 @@
 int wordcount (char *filename)
 {
   FILE *fp;
-  char ch;
+  int n;
   int num=0;
   int status;
   status=0;   //0 região palavra e 1 região espaço
   fp = fopen(filename,"r");
 
-   while( (ch=fgetc(fp))!= EOF )
+   while( (n=fgetc(fp))!= EOF )
     {
-       if(status==0 && ch==32)
+       if(status==0 && n==32)
       {
         num++;
         status=1;
       }
-      if(status==1 && ch!=32)
+      if(status==1 && n!=32)
       {
         status=0;
       }
