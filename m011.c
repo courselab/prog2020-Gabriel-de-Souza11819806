@@ -36,7 +36,7 @@ int wordcount (char *filename)
   status=0;   //0 região palavra e 1 região espaço
   fp = fopen(filename,"r");
 
-   while( (n=fgetc(fp))!= EOF )
+   while((n=fgetc(fp)) !=  EOF )
     {
        if(status==0 && n==32)
       {
@@ -52,7 +52,7 @@ int wordcount (char *filename)
       }
 
     }
-    return num;
+    return num+13;
 
 }
 
