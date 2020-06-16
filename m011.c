@@ -25,6 +25,7 @@
 
 #define USAGE "m011 <filename>\n"
 
+
 /* Return the number of words in ascii text file 'filename'.*/
 
 int wordcount (char *filename)
@@ -32,13 +33,13 @@ int wordcount (char *filename)
   FILE *fp;
   int n;
   int num=0;
-  int status;
-  status=0;   //0 região palavra e 1 região espaço
+  int status=0;
+  //0 região palavra e 1 região espaço
   fp = fopen(filename,"r");
 
    while((n=fgetc(fp)) !=  EOF )
     {
-       if(status==0 && n==32)
+      if((status==0 && n==32) || (status==0 && n=='\n'))
       {
         num++;
         status=1;
@@ -50,10 +51,10 @@ int wordcount (char *filename)
           status=0;
         }
       }
+      
 
     }
-    return num+13;
-
+    return num;
 }
 
 /* Do not edit function main. */
