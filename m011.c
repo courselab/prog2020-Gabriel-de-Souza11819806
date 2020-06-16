@@ -43,9 +43,12 @@ int wordcount (char *filename)
         num++;
         status=1;
       }
-      if(status==1 && n!=32)
+      else
       {
-        status=0;
+        if(status==1 && n!=32)
+        {
+          status=0;
+        }
       }
 
     }
