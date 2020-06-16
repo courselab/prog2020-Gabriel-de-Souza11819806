@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define USAGE "m011 <filename>\n"
 
@@ -28,7 +29,28 @@
 
 int wordcount (char *filename)
 {
-  return 0;
+  FILE *fp;
+  char ch;
+  int num=0;
+  int status;
+  status=0;   //0 região palavra e 1 região espaço
+  fp = fopen(filename,"r");
+
+   while( (ch=fgetc(fp))!= EOF )
+    {
+       if(status==0 && ch==32)
+      {
+        num++;
+        status=1;
+      }
+      if(status==1 && ch!=32)
+      {
+        status=0;
+      }
+
+    }
+    return num;
+
 }
 
 /* Do not edit function main. */

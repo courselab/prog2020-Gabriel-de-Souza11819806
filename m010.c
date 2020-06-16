@@ -30,7 +30,7 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  
 }
 
 /* Do not edit function main. */
