@@ -74,7 +74,7 @@ void lastname (char *s)
   {
   	if(status==0)
   	{
-  		s[i]=s[i]+32;
+  		
   		status++;
   		
 	}
