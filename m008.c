@@ -40,6 +40,24 @@ void lastname (char *s)
   strcpy(t,s);
   v=strlen(t)-1;
   
+  
+ /* for(i=0;t[i]!='\0';i++)
+  {
+  	if(s[i]==32)
+  	{
+  		pause++;	
+	}
+	if(pause==3)
+	{
+		v=i;
+		t[i]='\0';
+	}
+  }
+  t[i]=32;
+  v=i-1;
+  i=0;
+*/
+  
    for(i=v;t[i]!=32;i--)
   {
     
@@ -56,6 +74,7 @@ void lastname (char *s)
   {
   	if(status==0)
   	{
+  		s[i]=s[i]+32;
   		status++;
   		
 	}
@@ -80,7 +99,11 @@ void lastname (char *s)
   	w++;
   }
   i=0;
+  
+
 }
+
+
 
 /* Do not edit this function. */
 
