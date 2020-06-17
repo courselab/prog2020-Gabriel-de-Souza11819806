@@ -72,20 +72,12 @@ void lastname (char *s)
   } 
   for(i=0;i<=n-1;i++)
   {
-  	if(status==0)
-  	{
-  		
-  		status++;
-  		
-	}
-	else
-	{
+  
 	
   	if(s[i]>='a' || s[i]<='z')
   	{
   		s[i]=s[i]-32;
   		
-	}
 	}
   }
   s[n]=',';
