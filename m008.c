@@ -80,11 +80,7 @@ void lastname (char *s)
   	w++;
   }
   i=0;
-  
-
 }
-
-
 
 /* Do not edit this function. */
 
